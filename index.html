@@ -5,62 +5,78 @@
 <title>Srujana Reddy Portfolio</title>
 
 <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #eef2f7, #dbe6f6);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  header {
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: white;
-    text-align: center;
-    padding: 40px;
-  }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
 
-  header h1 {
-    margin: 0;
-    font-size: 34px;
-  }
+/* Header */
+header {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
 
-  section {
-    width: 85%;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.3s;
-  }
+/* Sections */
+section {
+  width: 80%;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 15px;
 
-  section:hover {
-    transform: scale(1.01);
-  }
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
 
-  h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #4ca1af;
-    padding-bottom: 5px;
-  }
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
-  ul {
-    line-height: 1.8;
-  }
+  transition: transform 0.3s ease;
+}
 
-  .gallery img {
-    width: 180px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  }
+section:hover {
+  transform: translateY(-5px);
+}
 
-  footer {
-    text-align: center;
-    background: #2c3e50;
-    color: white;
-    padding: 15px;
-    margin-top: 30px;
-  }
+h2 {
+  color: #243b55;
+  border-left: 5px solid #4ca1af;
+  padding-left: 10px;
+}
+
+/* Gallery */
+.gallery img {
+  width: 180px;
+  margin: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Links */
+a {
+  color: #0a66c2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #141e30;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
 </style>
 </head>
 
@@ -142,7 +158,13 @@
     <li>Attended technical workshops and events</li>
   </ul>
 
-
+  <h3>Gallery</h3>
+  <div class="gallery">
+    <img src="images/image1.jpg">
+    <img src="images/image2.jpg">
+    <img src="images/image3.jpg">
+  </div>
+</section>
 
 <section>
   <h2>Languages Known</h2>
@@ -150,6 +172,16 @@
     <li>English</li>
     <li>Telugu</li>
   </ul>
+</section>
+
+<section>
+  <h2>LinkedIn Profile</h2>
+  <p>
+    Connect with me on LinkedIn:  
+    <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+      SRUJANA REDDY
+    </a>
+  </p>
 </section>
 
 <footer>
