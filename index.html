@@ -18,156 +18,142 @@ body {
 
 /* Header */
 header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 60px 20px;
   text-align: center;
+  background: #111827;
+  border-bottom: 1px solid #1e293b;
 }
 
 header h1 {
-  font-size: 50px;
-  color: #38bdf8;
   margin: 0;
+  font-size: 38px;
+  color: #38bdf8;
 }
 
 header p {
-  font-size: 20px;
+  margin-top: 8px;
   color: #cbd5e1;
 }
 
-/* Sections */
+/* Sections (compact now) */
 section {
-  min-height: 100vh;
-  padding: 80px 10%;
+  padding: 30px 12%;
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
+  transform: translateY(25px);
+  transition: all 0.6s ease;
+  border-bottom: 1px solid #1e293b;
 }
 
-/* When visible */
+/* Show on scroll */
 section.show {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Titles */
 h2 {
   color: #38bdf8;
-  border-left: 5px solid #38bdf8;
-  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
 }
 
-/* Cards */
+/* Content box */
 .card {
   background: #1e293b;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Lists compact */
+ul {
+  margin: 0;
+  padding-left: 18px;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 15px;
   background: #020617;
+  font-size: 13px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>G. Srujana Reddy</h1>
-  <p>AIML Student | Future AI Engineer</p>
+  <p>AIML Student | Aspiring AI Engineer</p>
 </header>
 
-<!-- CAREER OBJECTIVE -->
 <section>
   <h2>Career Objective</h2>
   <div class="card">
-    I am a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
-    I aim to build strong technical skills and grow through real-world learning and projects.
+    First-year B.Tech AIML student focused on building strong programming and AI/ML fundamentals through continuous learning and practice.
   </div>
 </section>
 
-<!-- ABOUT -->
 <section>
   <h2>About Me</h2>
   <div class="card">
-    Curious and dedicated AIML student focused on programming, logical thinking, and AI fundamentals.
+    Curious and dedicated learner interested in technology, problem solving, and artificial intelligence.
   </div>
 </section>
 
-<!-- PERSONAL DETAILS -->
 <section>
   <h2>Personal Details</h2>
   <div class="card">
-    <p><b>Name:</b> G. Srujana Reddy</p>
-    <p><b>DOB:</b> 19 Nov 2007</p>
-    <p><b>Gender:</b> Female</p>
-    <p><b>Address:</b> Wanaparthy, Telangana</p>
-    <p><b>Father:</b> G. Rajeshwar Reddy</p>
-    <p><b>Mother:</b> G. Manjula Reddy</p>
+    Name: G. Srujana Reddy<br>
+    DOB: 19 Nov 2007<br>
+    Gender: Female<br>
+    Address: Wanaparthy, Telangana<br>
+    Father: G. Rajeshwar Reddy<br>
+    Mother: G. Manjula Reddy
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section>
   <h2>Education</h2>
   <div class="card">
-    <p>CBSE - 86.8%</p>
-    <p>Intermediate - 93%</p>
-    <p>B.Tech AIML (1st Year - Pursuing)</p>
+    CBSE: 86.8%<br>
+    Intermediate: 93%<br>
+    B.Tech AIML (1st Year - Pursuing)
   </div>
 </section>
 
-<!-- SKILLS -->
 <section>
   <h2>Skills</h2>
   <div class="card">
-    <p><b>Technical:</b> C Programming, AI & ML Basics, Computer Fundamentals</p>
-    <p><b>Non-Technical:</b> Communication, Leadership, Teamwork, Time Management</p>
+    C Programming (Basic), Computer Fundamentals, AI & ML Basics<br>
+    Communication, Leadership, Teamwork, Time Management
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
 <section>
   <h2>Achievements</h2>
   <div class="card">
-    <ul>
-      
-      <li>Scouts & Guides Training at school level</li>
-      <li>Bio Enzyme Guinness Record Project</li>
-      <li>Trained in Taekwondo</li>
-      <li>Microsoft Tech Event Participation</li>
-    </ul>
+    Scouts & Guides Training at school level, Bio Enzyme Guinness world record Project,<br>
+    Trained in Taekwondo, Microsoft Tech Event Participation
   </div>
 </section>
 
-<!-- HOBBIES -->
 <section>
   <h2>Hobbies</h2>
   <div class="card">
-    <ul>
-      <li>Learning new technologies</li>
-    
-      <li>Reading tech articles</li>
-    
-      <li>Participated in workshops and events</li>
-    </ul>
+    Learning new technologies, coding practice, reading tech content,<br>
+    Taekwondo, team activities
   </div>
 </section>
 
-<!-- CONTACT -->
 <section>
   <h2>Contact</h2>
   <div class="card">
-    <p><b>Phone:</b> 7674062564</p>
-    <p><b>Email:</b> srujanareddy851@gmail.com</p>
-    <p><b>LinkedIn:</b> SRUJANA REDDY</p>
+    Phone: 7674062564<br>
+    Email: srujanareddy851@gmail.com<br>
+    LinkedIn: SRUJANA REDDY
   </div>
 </section>
 
@@ -176,15 +162,15 @@ footer {
 </footer>
 
 <script>
-// Scroll animation
+// Smooth reveal on scroll
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
-    const top = window.scrollY;
-    const offset = sec.offsetTop - 500;
+    const trigger = window.innerHeight - 100;
+    const top = sec.getBoundingClientRect().top;
 
-    if (top > offset) {
+    if (top < trigger) {
       sec.classList.add("show");
     }
   });
@@ -193,5 +179,3 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
-
-
