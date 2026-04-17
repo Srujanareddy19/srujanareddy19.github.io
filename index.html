@@ -5,202 +5,193 @@
 <title>Srujana Reddy Portfolio</title>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  height: 100vh;
   background: #0f172a;
   color: #e2e8f0;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 260px;
-  background: #020617;
-  padding: 20px;
-  border-right: 1px solid #1e293b;
-}
-
-.sidebar h2 {
+/* Header */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   text-align: center;
+}
+
+header h1 {
+  font-size: 50px;
   color: #38bdf8;
+  margin: 0;
 }
 
-.sidebar button {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  background: transparent;
-  border: none;
-  color: #cbd5f5;
-  text-align: left;
-  cursor: pointer;
-  font-size: 15px;
-  transition: 0.3s;
+header p {
+  font-size: 20px;
+  color: #cbd5e1;
 }
 
-.sidebar button:hover {
-  background: #1e293b;
-  border-radius: 6px;
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 80px 10%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
 }
 
-/* Content */
-.content {
-  flex: 1;
-  padding: 30px;
-  overflow-y: auto;
+/* When visible */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.section {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
-h1 {
+h2 {
   color: #38bdf8;
-  border-bottom: 2px solid #1e293b;
-  padding-bottom: 10px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 10px;
 }
 
+/* Cards */
 .card {
+  background: #1e293b;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
   background: #020617;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #1e293b;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="sidebar">
-  <h2>Srujana</h2>
+<!-- HEADER -->
+<header>
+  <h1>G. Srujana Reddy</h1>
+  <p>AIML Student | Future AI Engineer</p>
+</header>
 
-  <button onclick="show('objective')">📁 Career Objective</button>
-  <button onclick="show('about')">📁 About Me</button>
-  <button onclick="show('personal')">📁 Personal Details</button>
-  <button onclick="show('education')">📁 Education</button>
-  <button onclick="show('skills')">📁 Skills</button>
-  <button onclick="show('achievements')">📁 Achievements</button>
-  <button onclick="show('languages')">📁 Languages</button>
-  <button onclick="show('hobbies')">📁 Hobbies</button>
-  <button onclick="show('contact')">📁 Contact</button>
-</div>
+<!-- CAREER OBJECTIVE -->
+<section>
+  <h2>Career Objective</h2>
+  <div class="card">
+    I am a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
+    I aim to build strong technical skills and grow through real-world learning and projects.
+  </div>
+</section>
 
-<div class="content">
+<!-- ABOUT -->
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    Curious and dedicated AIML student focused on programming, logical thinking, and AI fundamentals.
+  </div>
+</section>
 
-<div id="objective" class="section active">
-<h1>Career Objective</h1>
-<p>I am a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning (AIML). I am building a strong foundation in programming and technical concepts and aim to grow through continuous learning and practical experience.</p>
-</div>
+<!-- PERSONAL DETAILS -->
+<section>
+  <h2>Personal Details</h2>
+  <div class="card">
+    <p><b>Name:</b> G. Srujana Reddy</p>
+    <p><b>DOB:</b> 19 Nov 2007</p>
+    <p><b>Gender:</b> Female</p>
+    <p><b>Address:</b> Wanaparthy, Telangana</p>
+    <p><b>Father:</b> G. Rajeshwar Reddy</p>
+    <p><b>Mother:</b> G. Manjula Reddy</p>
+  </div>
+</section>
 
-<div id="about" class="section">
-<h1>About Me</h1>
-<p>I am a curious and dedicated AIML student who enjoys exploring new technologies. I focus on improving logical thinking, programming skills, and understanding AI & ML fundamentals.</p>
-</div>
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <p>CBSE - 86.8%</p>
+    <p>Intermediate - 93%</p>
+    <p>B.Tech AIML (1st Year - Pursuing)</p>
+  </div>
+</section>
 
-<div id="personal" class="section">
-<h1>Personal Details</h1>
-<div class="card">
-<p><b>Name:</b> G. Srujana Reddy</p>
-<p><b>DOB:</b> 19 November 2007</p>
-<p><b>Gender:</b> Female</p>
-<p><b>Father:</b> G. Rajeshwar Reddy</p>
-<p><b>Mother:</b> G. Manjula Reddy</p>
-<p><b>Address:</b> Wanaparthy, Telangana</p>
-</div>
-</div>
+<!-- SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="card">
+    <p><b>Technical:</b> C Programming, AI & ML Basics, Computer Fundamentals</p>
+    <p><b>Non-Technical:</b> Communication, Leadership, Teamwork, Time Management</p>
+  </div>
+</section>
 
-<div id="education" class="section">
-<h1>Education</h1>
-<div class="card">
-<p><b>CBSE:</b> 86.8%</p>
-<p><b>Intermediate:</b> 93%</p>
-<p><b>B.Tech:</b> AIML (1st Year - Pursuing)</p>
-</div>
-</div>
+<!-- ACHIEVEMENTS -->
+<section>
+  <h2>Achievements</h2>
+  <div class="card">
+    <ul>
+      
+      <li>Scouts & Guides Training at school level</li>
+      <li>Bio Enzyme Guinness Record Project</li>
+      <li>Trained in Taekwondo</li>
+      <li>Microsoft Tech Event Participation</li>
+    </ul>
+  </div>
+</section>
 
-<div id="skills" class="section">
-<h1>Skills</h1>
-<div class="card">
-<h3>Technical Skills</h3>
-<ul>
-<li>C Programming (Basic)</li>
-<li>Computer Fundamentals</li>
-<li>Basic AI & ML Concepts</li>
-<li>Problem Solving</li>
-</ul>
+<!-- HOBBIES -->
+<section>
+  <h2>Hobbies</h2>
+  <div class="card">
+    <ul>
+      <li>Learning new technologies</li>
+    
+      <li>Reading tech articles</li>
+    
+      <li>Participated in workshops and events</li>
+    </ul>
+  </div>
+</section>
 
-<h3>Non-Technical Skills</h3>
-<ul>
-<li>Communication</li>
-<li>Leadership</li>
-<li>Teamwork</li>
-<li>Time Management</li>
-<li>Adaptability</li>
-</ul>
-</div>
-</div>
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    <p><b>Phone:</b> 7674062564</p>
+    <p><b>Email:</b> srujanareddy851@gmail.com</p>
+    <p><b>LinkedIn:</b> SRUJANA REDDY</p>
+  </div>
+</section>
 
-<div id="achievements" class="section">
-<h1>Achievements & Activities</h1>
-<div class="card">
-<ul>
-<li>Completed scouts and guides training at school levek</li>
-<li>NCC Cadet with activation in training programs</li>
-<li>Contributed to a Bioenzyme project that was part of guniness world record</li>
-<li>Trained in Taekwondo</li>
-<li>Participated in Microsoft Tech Event</li>
-</ul>
-</div>
-</div>
-
-<div id="languages" class="section">
-<h1>Languages Known</h1>
-<div class="card">
-<ul>
-<li>English</li>
-<li>Telugu</li>
-</ul>
-</div>
-</div>
-
-<div id="hobbies" class="section">
-<h1>Hobbies</h1>
-<div class="card">
-<ul>
-
-
-<li>Reading tech content</li>
-<li>Participating in team activities</li>
-</ul>
-</div>
-</div>
-
-<div id="contact" class="section">
-<h1>Contact</h1>
-<div class="card">
-<p><b>Phone:</b> 7674062564</p>
-<p><b>Email:</b> srujanareddy851@gmail.com</p>
-<p><b>LinkedIn:</b> SRUJANA REDDY</p>
-</div>
-</div>
-
-</div>
+<footer>
+  © 2026 G. Srujana Reddy | Portfolio
+</footer>
 
 <script>
-function show(id) {
-  let sections = document.querySelectorAll('.section');
-  sections.forEach(sec => sec.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
+// Scroll animation
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 500;
+
+    if (top > offset) {
+      sec.classList.add("show");
+    }
+  });
+});
 </script>
 
 </body>
 </html>
+
+
