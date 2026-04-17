@@ -12,187 +12,150 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0f172a;
   color: #e2e8f0;
-  display: flex;
-}
-
-/* Sidebar */
-nav {
-  width: 220px;
-  height: 100vh;
-  position: fixed;
-  background: #020617;
-  border-right: 1px solid #1e293b;
-  padding: 20px 10px;
-}
-
-nav h2 {
-  color: #38bdf8;
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-nav a {
-  display: block;
-  color: #cbd5e1;
-  text-decoration: none;
-  padding: 8px 10px;
-  margin: 4px 0;
-  font-size: 13px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  background: #1e293b;
-  color: #38bdf8;
-}
-
-/* Content */
-main {
-  margin-left: 220px;
-  width: calc(100% - 220px);
+  background: radial-gradient(circle at top, #111827, #0f172a 60%);
 }
 
 /* Header */
 header {
-  padding: 20px;
   text-align: center;
-  background: #111827;
-  border-bottom: 1px solid #1e293b;
+  padding: 50px 20px 30px;
 }
 
 header h1 {
+  font-size: 42px;
   margin: 0;
-  font-size: 28px;
   color: #38bdf8;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(56,189,248,0.4);
 }
 
 header p {
-  margin: 5px 0 0;
-  font-size: 13px;
+  margin-top: 8px;
   color: #cbd5e1;
+  font-size: 14px;
 }
 
-/* Sections compact */
+/* Sections */
 section {
-  padding: 10px 20px;
-  border-bottom: 1px solid #1e293b;
+  max-width: 850px;
+  margin: auto;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(148,163,184,0.15);
+
   opacity: 0;
-  transform: translateY(10px);
-  transition: 0.4s ease;
+  transform: translateY(15px);
+  transition: all 0.6s ease;
 }
 
+/* reveal animation */
 section.show {
   opacity: 1;
   transform: translateY(0);
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 18px;
   color: #38bdf8;
-  margin: 5px 0;
+  margin-bottom: 6px;
 }
 
+/* content box */
 .card {
-  background: #1e293b;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  line-height: 1.4;
+  background: rgba(30,41,59,0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  border: 1px solid rgba(148,163,184,0.15);
 }
 
-/* Footer */
+/* footer */
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   font-size: 12px;
-  background: #020617;
+  color: #94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <h2>Portfolio</h2>
-  <a href="#obj">Career Objective</a>
-  <a href="#about">About</a>
-  <a href="#personal">Personal</a>
-  <a href="#edu">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#ach">Achievements</a>
-  <a href="#hob">Hobbies</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<main>
-
 <header>
   <h1>G. Srujana Reddy</h1>
   <p>AIML Student | Future AI Engineer</p>
 </header>
 
-<section id="obj">
+<section>
 <h2>Career Objective</h2>
 <div class="card">
-B.Tech AIML student focused on building strong programming and AI/ML skills through consistent learning and practice.
+I am a first-year B.Tech AIML student focused on building strong programming, logical thinking, and AI/ML fundamentals through continuous learning and practical experience.
 </div>
 </section>
 
-<section id="about">
+<section>
 <h2>About Me</h2>
 <div class="card">
-Curious learner passionate about technology, problem solving, and artificial intelligence.
+A curious and dedicated student passionate about technology, artificial intelligence, and solving real-world problems through coding.
 </div>
 </section>
 
-<section id="personal">
+<section>
 <h2>Personal Details</h2>
 <div class="card">
 Name: G. Srujana Reddy<br>
-DOB: 19 Nov 2007<br>
 Address: Wanaparthy, Telangana<br>
+DOB: 19 November 2007<br>
+Gender: Female<br>
 Father: G. Rajeshwar Reddy<br>
 Mother: G. Manjula Reddy
 </div>
 </section>
 
-<section id="edu">
+<section>
 <h2>Education</h2>
 <div class="card">
 CBSE: 86.8%<br>
 Intermediate: 93%<br>
-B.Tech AIML (1st Year)
+B.Tech AIML (1st Year - Pursuing)
 </div>
 </section>
 
-<section id="skills">
+<section>
 <h2>Skills</h2>
 <div class="card">
-C Programming, AI & ML Basics, Computer Fundamentals<br>
-Communication, Leadership, Teamwork
+C Programming (Basic)<br>
+Computer Fundamentals<br>
+AI & ML Basics<br>
+Communication, Leadership, Teamwork, Adaptability
 </div>
 </section>
 
-<section id="ach">
+<section>
 <h2>Achievements</h2>
 <div class="card">
-Scouts & Guides at school level, Bio Enzyme gunniess world record project,<br>
-Trained in Taekwondo, Participated in Microsoft Tech Event
+NCC Cadet<br>
+Scouts & Guides Training<br>
+Bio Enzyme Guinness World Record Contribution<br>
+Taekwondo Training<br>
+Microsoft Tech Event Participation
 </div>
 </section>
 
-<section id="hob">
+<section>
 <h2>Hobbies</h2>
 <div class="card">
-Coding, learning tech, reading, Taekwondo, teamwork activities
+Learning new technologies<br>
+Coding & problem solving<br>
+Reading tech content<br>
+Taekwondo<br>
+Team activities and collaboration
 </div>
 </section>
 
-<section id="contact">
+<section>
 <h2>Contact</h2>
 <div class="card">
 Phone: 7674062564<br>
@@ -202,10 +165,8 @@ LinkedIn: SRUJANA REDDY
 </section>
 
 <footer>
-© 2026 G. Srujana Reddy
+© 2026 G. Srujana Reddy | All Rights Reserved
 </footer>
-
-</main>
 
 <script>
 const sections = document.querySelectorAll("section");
@@ -213,7 +174,7 @@ const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 80) {
+    if (top < window.innerHeight - 70) {
       sec.classList.add("show");
     }
   });
