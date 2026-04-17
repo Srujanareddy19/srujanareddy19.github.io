@@ -5,183 +5,202 @@
 <title>Srujana Reddy Portfolio</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, #141e30, #243b55);
-  color: white;
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #020617;
+  padding: 20px;
+  border-right: 1px solid #1e293b;
+}
+
+.sidebar h2 {
   text-align: center;
-  padding: 50px;
+  color: #38bdf8;
 }
 
-/* Sections */
-section {
-  width: 80%;
-  margin: 25px auto;
-  padding: 25px;
-  border-radius: 15px;
-
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-  transition: transform 0.3s ease;
-}
-
-section:hover {
-  transform: translateY(-5px);
-}
-
-h2 {
-  color: #243b55;
-  border-left: 5px solid #4ca1af;
-  padding-left: 10px;
-}
-
-/* Gallery */
-.gallery img {
-  width: 180px;
-  margin: 10px;
-  border-radius: 12px;
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: transparent;
+  border: none;
+  color: #cbd5f5;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
   transition: 0.3s;
 }
 
-.gallery img:hover {
-  transform: scale(1.1);
+.sidebar button:hover {
+  background: #1e293b;
+  border-radius: 6px;
 }
 
-/* Links */
-a {
-  color: #0a66c2;
-  font-weight: bold;
-  text-decoration: none;
+/* Content */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
 }
 
-a:hover {
-  text-decoration: underline;
+.section {
+  display: none;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background: #141e30;
-  color: white;
+.active {
+  display: block;
+}
+
+h1 {
+  color: #38bdf8;
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 10px;
+}
+
+.card {
+  background: #020617;
   padding: 15px;
-  margin-top: 30px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-  <h1>G. Srujana Reddy</h1>
-  <p>B.Tech First Year | Artificial Intelligence & Machine Learning (AIML)</p>
-</header>
+<div class="sidebar">
+  <h2>Srujana</h2>
 
-<section>
-  <h2>Career Objective</h2>
-  <p>
-    I am a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning (AIML).
-    I am building my foundation in programming and core technical concepts and aim to grow my skills
-    through learning and practical experience.
-  </p>
-</section>
+  <button onclick="show('objective')">📁 Career Objective</button>
+  <button onclick="show('about')">📁 About Me</button>
+  <button onclick="show('personal')">📁 Personal Details</button>
+  <button onclick="show('education')">📁 Education</button>
+  <button onclick="show('skills')">📁 Skills</button>
+  <button onclick="show('achievements')">📁 Achievements</button>
+  <button onclick="show('languages')">📁 Languages</button>
+  <button onclick="show('hobbies')">📁 Hobbies</button>
+  <button onclick="show('contact')">📁 Contact</button>
+</div>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a curious and dedicated AIML student who enjoys learning new technologies.
-    I am currently focusing on programming basics, logical thinking, and understanding AI & ML fundamentals.
-  </p>
-</section>
+<div class="content">
 
-<section>
-  <h2>Personal Details</h2>
-  <ul>
-    <li><b>Address:</b> Wanaparthy, Telangana</li>
-    <li><b>Phone:</b> 7674062564</li>
-    <li><b>Email:</b> srujanareddy851@gmail.com</li>
-    <li><b>Date of Birth:</b> 19 November 2007</li>
-    <li><b>Gender:</b> Female</li>
-    <li><b>Father's Name:</b> G. Rajeshwar Reddy</li>
-    <li><b>Mother's Name:</b> G. Manjula Reddy</li>
-  </ul>
-</section>
+<div id="objective" class="section active">
+<h1>Career Objective</h1>
+<p>I am a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning (AIML). I am building a strong foundation in programming and technical concepts and aim to grow through continuous learning and practical experience.</p>
+</div>
 
-<section>
-  <h2>Education</h2>
-  <ul>
-    <li><b>CBSE:</b> 86.8%</li>
-    <li><b>Intermediate:</b> 93%</li>
-    <li><b>B.Tech:</b> AIML (1st Year - Pursuing)</li>
-  </ul>
-</section>
+<div id="about" class="section">
+<h1>About Me</h1>
+<p>I am a curious and dedicated AIML student who enjoys exploring new technologies. I focus on improving logical thinking, programming skills, and understanding AI & ML fundamentals.</p>
+</div>
 
-<section>
-  <h2>Technical Skills</h2>
-  <ul>
-    <li>C Programming (Basic)</li>
-    <li>Computer Fundamentals</li>
-    <li>Basic knowledge of AI & ML</li>
-    <li>Problem Solving Skills</li>
-  </ul>
-</section>
+<div id="personal" class="section">
+<h1>Personal Details</h1>
+<div class="card">
+<p><b>Name:</b> G. Srujana Reddy</p>
+<p><b>DOB:</b> 19 November 2007</p>
+<p><b>Gender:</b> Female</p>
+<p><b>Father:</b> G. Rajeshwar Reddy</p>
+<p><b>Mother:</b> G. Manjula Reddy</p>
+<p><b>Address:</b> Wanaparthy, Telangana</p>
+</div>
+</div>
 
-<section>
-  <h2>Non-Technical Skills</h2>
-  <ul>
-    <li>Communication</li>
-    <li>Leadership</li>
-    <li>Teamwork</li>
-    <li>Time Management</li>
-    <li>Adaptability</li>
-  </ul>
-</section>
+<div id="education" class="section">
+<h1>Education</h1>
+<div class="card">
+<p><b>CBSE:</b> 86.8%</p>
+<p><b>Intermediate:</b> 93%</p>
+<p><b>B.Tech:</b> AIML (1st Year - Pursuing)</p>
+</div>
+</div>
 
-<section>
-  <h2>Achievements & Activities</h2>
-  <ul>
-    <li>Completed Scouts and Guides training at school level</li>
-    <li>NCC Cadet with active participation in training programs</li>
-    <li>Contributed to a Bio Enzyme project that was part of a Guinness World Record achievement</li>
-    <li>Trained in Taekwondo</li>
-    <li>Participated in a technology event organized by Microsoft TechBoy Deepak</li>
-  </ul>
+<div id="skills" class="section">
+<h1>Skills</h1>
+<div class="card">
+<h3>Technical Skills</h3>
+<ul>
+<li>C Programming (Basic)</li>
+<li>Computer Fundamentals</li>
+<li>Basic AI & ML Concepts</li>
+<li>Problem Solving</li>
+</ul>
 
-  
-  </div>
-</section>
+<h3>Non-Technical Skills</h3>
+<ul>
+<li>Communication</li>
+<li>Leadership</li>
+<li>Teamwork</li>
+<li>Time Management</li>
+<li>Adaptability</li>
+</ul>
+</div>
+</div>
 
-<section>
-  <h2>Languages Known</h2>
-  <ul>
-    <li>English</li>
-    <li>Telugu</li>
-  </ul>
-</section>
+<div id="achievements" class="section">
+<h1>Achievements & Activities</h1>
+<div class="card">
+<ul>
+<li>Completed scouts and guides training at school levek</li>
+<li>NCC Cadet with activation in training programs</li>
+<li>Contributed to a Bioenzyme project that was part of guniness world record</li>
+<li>Trained in Taekwondo</li>
+<li>Participated in Microsoft Tech Event</li>
+</ul>
+</div>
+</div>
 
-<section>
-  <h2>LinkedIn Profile</h2>
-  <p>
-    Connect with me on LinkedIn:  
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank">
-      SRUJANA REDDY
-    </a>
-  </p>
-</section>
+<div id="languages" class="section">
+<h1>Languages Known</h1>
+<div class="card">
+<ul>
+<li>English</li>
+<li>Telugu</li>
+</ul>
+</div>
+</div>
 
-<footer>
-  © 2026 Srujana Reddy | AIML Portfolio
-</footer>
+<div id="hobbies" class="section">
+<h1>Hobbies</h1>
+<div class="card">
+<ul>
+
+
+<li>Reading tech content</li>
+<li>Participating in team activities</li>
+</ul>
+</div>
+</div>
+
+<div id="contact" class="section">
+<h1>Contact</h1>
+<div class="card">
+<p><b>Phone:</b> 7674062564</p>
+<p><b>Email:</b> srujanareddy851@gmail.com</p>
+<p><b>LinkedIn:</b> SRUJANA REDDY</p>
+</div>
+</div>
+
+</div>
+
+<script>
+function show(id) {
+  let sections = document.querySelectorAll('.section');
+  sections.forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
